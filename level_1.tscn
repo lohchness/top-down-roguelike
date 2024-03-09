@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqgk0o6lb436x"]
+
+[ext_resource type="PackedScene" uid="uid://po4lym4qrmng" path="res://squareRoom.tscn" id="1_ld3vr"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_wl5y6"]
+[ext_resource type="PackedScene" uid="uid://by24acej4g66x" path="res://player.tscn" id="2_tw5g4"]
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_wl5y6")
+
+[node name="TileMap" parent="." instance=ExtResource("1_ld3vr")]
+
+[node name="Player" parent="." instance=ExtResource("2_tw5g4")]
+position = Vector2(552, 310)
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

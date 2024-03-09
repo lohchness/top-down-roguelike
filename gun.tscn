@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6be7b8xuwgbj"]
+
+[ext_resource type="Texture2D" uid="uid://b84rhm8o1x347" path="res://assets/textures/gun.png" id="1_pt6qq"]
+[ext_resource type="Script" path="res://gun.gd" id="2_8ujva"]
+
+[node name="Gun" type="Sprite2D"]
+texture = ExtResource("1_pt6qq")
+offset = Vector2(0, 2)
+script = ExtResource("2_8ujva")
